@@ -37,6 +37,12 @@ class Animal
      */
     private $poids;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Espece::class, inversedBy="animaux")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $espece;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +92,18 @@ class Animal
     public function setPoids(int $poids): self
     {
         $this->poids = $poids;
+
+        return $this;
+    }
+
+    public function getEspece(): ?Espece
+    {
+        return $this->espece;
+    }
+
+    public function setEspece(?Espece $espece): self
+    {
+        $this->espece = $espece;
 
         return $this;
     }

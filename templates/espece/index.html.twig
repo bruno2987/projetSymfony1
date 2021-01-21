@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EspeceController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<h1>les zespeces</h1>
+
+<div class="example-wrapper">
+    <ul>
+    {% for espece in especes %}
+        <li>{{espece.libelle}}: {{espece.description}} :comme
+        {% for animal in espece.animaux %}
+        {{animal.nom}}
+        {% endfor %}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -30,7 +30,6 @@ class AnimalController extends AbstractController
     public function afficherAnimal(AnimalRepository $repository, $id)
     {
         $unAnimal = $repository->find($id);
-        //print_r($animaux);
         return $this->render('animal/afficheAnimal.html.twig',[
             "animal" => $unAnimal
         ]);

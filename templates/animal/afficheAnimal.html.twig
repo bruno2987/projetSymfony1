@@ -13,7 +13,13 @@
 <div class="example-wrapper">
 
 <p> {{animal.nom}} est de couleur {{animal.color}} et pèse {{animal.poids}} kg </p>
-<p> Cet animal fait partit de l'espèce <strong>{{animal.espece.libelle}}</strong></p>
+<p> Cet animal fait partie de l'espèce <strong>{{animal.espece.libelle}}</strong></p>
+<p> les {{animal.nom}}s vivent sur les continents suivants:</p>
+<ul>
+    {% for continent in animal.continents %}
+    <li> {{continent.libelle}}
+            {% endfor %}</li>
+</ul>
 
 </div>
 {% endblock %}

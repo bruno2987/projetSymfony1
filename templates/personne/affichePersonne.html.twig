@@ -11,10 +11,12 @@
 <h1>les zens</h1>
 
 <div class="example-wrapper">
-<h2>{{personne.nom}}</h2><br>
-    {% for personne in personne.disposes %}
-    {{personne.animal.nom}}
-    {% endfor %}
+<p><h2>{{personne.nom}}</h2> possède:</p><br>
+<ul>
+    {% for personnes in personne.disposes %}
+    <li>{{personnes.animal.nom}}
+    {% endfor %}</li>
+</ul>
 </div>
 
 

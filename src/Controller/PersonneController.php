@@ -25,7 +25,7 @@ class PersonneController extends AbstractController
         /**
      * @Route("/personne/{id}", name="afficher_personne")
      */
-    public function afficherAnimal(AnimalRepository $repository, $id)
+    public function afficherPersonne(PersonneRepository $repository, $id)
     {
         $unePersonne = $repository->find($id);
         return $this->render('personne/affichePersonne.html.twig',[

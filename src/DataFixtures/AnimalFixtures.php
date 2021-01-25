@@ -63,16 +63,20 @@ class AnimalFixtures extends Fixture
         $d1 = new Dispose();
         $d1->setPersonne($p1)
         ->setAnimal($a1)
-        ->setNombre(10)
-        ->setAnimal($a2)
-        ->setNombre(5);
+        ->setNombre(10);
         $manager->persist($d1);
 
         $d2 = new Dispose();
-        $d2->setPersonne($p2)
-        ->setAnimal($a1)
+        $d2->setPersonne($p1)
+        ->setAnimal($a2)
         ->setNombre(5);
         $manager->persist($d2);
+
+        $d3 = new Dispose();
+        $d3->setPersonne($p2)
+        ->setAnimal($a1)
+        ->setNombre(5);
+        $manager->persist($d3);
 
 
         $manager->flush();

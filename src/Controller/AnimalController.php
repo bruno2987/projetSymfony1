@@ -35,4 +35,11 @@ class AnimalController extends AbstractController
         ]);
 
     }
+
+    /**
+     * @Route ('/animaux/{poids}, name="animauxLegers"')
+     */
+
+     //public function getAnimalLeger (AnimalRepository)
+
 }

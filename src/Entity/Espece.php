@@ -30,7 +30,7 @@ class Espece
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity=animal::class, mappedBy="espece")
+     * @ORM\OneToMany(targetEntity=Animal::class, mappedBy="espece")
      */
     private $animaux;
 

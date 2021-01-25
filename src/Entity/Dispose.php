@@ -18,12 +18,12 @@ class Dispose
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=animal::class, inversedBy="disposes")
+     * @ORM\ManyToOne(targetEntity=Animal::class, inversedBy="disposes")
      */
     private $animal;
 
     /**
-     * @ORM\ManyToOne(targetEntity=personne::class, inversedBy="disposes")
+     * @ORM\ManyToOne(targetEntity=Personne::class, inversedBy="disposes")
      */
     private $personne;
 

@@ -20,6 +20,12 @@
     <li> {{continent.libelle}}
             {% endfor %}</li>
 </ul>
+Personnes qui possèdent cet animal:
+<ul>
+{% for dispose in animal.disposes %}
+    <li>{{dispose.personne.nom}}
+        {% endfor %}</li>
+</ul>
 
 </div>
 {% endblock %}

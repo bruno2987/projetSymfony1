@@ -24,7 +24,7 @@ class AnimalController extends AbstractController
 
     }
 
-        /**
+    /**
      * @Route("/animal/{id}", name="afficher_animal")
      */
     public function afficherAnimal(AnimalRepository $repository, $id)
@@ -37,9 +37,14 @@ class AnimalController extends AbstractController
     }
 
     /**
-     * @Route ('/animaux/{poids}, name="animauxLegers"')
+     * @Route("/animal_leger/{poids}", name="afficher_animal_leger")
      */
-
-     //public function getAnimalLeger (AnimalRepository)
+    public function afficherAnimauxLeger(AnimalRepository $repository, $poids)
+    {
+        $animaux= $repository->getAnimauxLegers($poids);
+        return $this->render('animal/index.html.twig',[
+            "animaux" => $animaux
+        ]);
+    }
 
 }

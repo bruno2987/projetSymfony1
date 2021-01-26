@@ -6,6 +6,8 @@ use App\Repository\AnimalRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;     // Pour mettre des contraintes de validations des donnée quand on les rentre via des formulaires
+
 
 /**
  * @ORM\Entity(repositoryClass=AnimalRepository::class)
@@ -36,7 +38,11 @@ class Animal
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=2,max=500)
      */
+
+     //   explication @Assert\Range(min=2,max=500)  (issu de use Symfony\Component\Validator\Constraints as Assert;):
+     //  La valeur pour être valide devra se trouver entre 2 et 500.
     private $poids;
 
     /**

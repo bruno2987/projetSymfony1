@@ -23,7 +23,7 @@
 Personnes qui possèdent cet animal:
 <ul>
 {% for dispose in animal.disposes %}
-    <li>{{dispose.personne.nom}}
+    <li>{{dispose.personne.nom}} : {{dispose.nombre}}
         {% endfor %}</li>
 </ul>
 
